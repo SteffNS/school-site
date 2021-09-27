@@ -1,0 +1,17 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	font-family: 'Oswald', sans-serif;
+	margin-top: 55px;
+}
+
+h1{
+	text-align: center;
+	@media(min-width:37.5rem){
+		text-align: initial;
+	}
+}

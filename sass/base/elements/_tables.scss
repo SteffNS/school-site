@@ -1,0 +1,31 @@
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+//Schedule page
+.schedule{
+	min-height: 70vh;
+	th{
+		display: block;
+		text-align: center;
+		@media(min-width:37.5em){
+			display: table-cell;
+		}
+	}
+	tr:nth-of-type(odd) {
+		background-color: #dfdfdf;
+	}
+	tr:nth-of-type(even) {
+		background-color: #afafaf;
+	}
+	td{
+		text-align: center;
+		display: block;
+		@media(min-width: 37.5em){
+			display: table-cell;
+			width: 33.33%;
+			padding: 2rem;
+		}
+	}
+}

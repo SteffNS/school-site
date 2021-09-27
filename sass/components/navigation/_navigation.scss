@@ -1,0 +1,194 @@
+.main-navigation {
+	display: block;
+	width: 100%;
+	top: 52px;
+	right: 0;
+	position: absolute;
+	background-color: black;
+	text-align: center;
+
+	@media(min-width:34.5em){
+		width: initial;
+		top: initial;
+		position: initial;
+		right: initial;
+	}
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			top: 100%;
+			z-index: 99999;
+			background-color: black;
+
+			@media(min-width: 34.5rem){
+				display: flex;
+				flex-direction: column;
+				left: -999em;
+				position: absolute;
+				float: left;
+
+				li:hover{
+					background-color: #242020;
+				}
+			}
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+
+				&:hover > ul,
+				&.focus > ul {
+					display: block;
+					left: auto;
+				}
+			}
+
+			@media(min-width:34.5rem){
+				a {
+					width: 400px;
+				}
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		position: relative;
+
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		text-transform: uppercase;
+		padding: 1rem;
+		font-size: 0.9em;
+
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+
+}
+
+@media screen and (min-width: 34.5rem) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: flex;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+	}
+
+	.nav-links {
+		display: flex;
+	}
+
+	.nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.nav-next {
+		text-align: end;
+		flex: 1 0 50%;
+	}
+}
+#masthead{
+	width: 100%;
+	height: 55px;
+	border-top: 2px solid #0c3b02;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: black;
+
+
+	.sub-menu {
+		display: flex;
+		flex-direction: column;
+		@media(min-width: 34.5rem){
+			text-align: left;
+		}
+	}
+
+
+	a{
+		@media(min-width: 34.5rem){
+			padding: 0 .5rem;
+		}
+	}
+	.site-branding{
+		text-transform: uppercase;
+		padding: .5rem;
+
+		p{
+			margin-bottom: 0.85em;
+		}
+		@media(min-width: 50rem){
+			padding: 1rem;
+			a{
+				padding: .75rem 2rem;
+			}
+		}
+	}
+
+}
+.menu-toggle {
+	position: absolute;
+	right: 0;
+	top: -3rem;
+	background: transparent;
+	color: #17a770;
+	border: none;
+	svg{
+		path{
+			fill: currentColor;
+		}
+	}
+}

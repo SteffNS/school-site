@@ -1,0 +1,181 @@
+.sticky {
+	display: block;
+}
+
+// .post,
+// .page {
+// 	margin: 0 0 1.5em;
+// }
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+//pages and posts
+//main page styling
+#primary {
+	max-width: 70rem;
+	margin: 0 auto;
+	padding: .5rem;
+	line-height: 1.5;
+	padding: .75rem;
+
+	//staff page
+	.staff-category{
+		text-decoration: underline;
+		@media(min-width:40.5rem){
+			padding-left: 1.5rem;
+		}
+	}
+	.staff-section{
+		@media(min-width:40.5rem){
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 2.2rem;
+			padding-left: 1.5rem;
+			
+			article{
+				margin-right: 5rem;
+			}
+		}
+	}
+	//students page
+	.students-section{
+
+		@media(min-width:37.5rem){
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+		article{
+			margin: 0 auto;
+			max-width: 300px;
+			@media(min-width:37.5rem){
+				width: 30%;
+			}
+		}
+	
+		img{
+			width: 300px;
+			height: 200px;
+			object-fit: cover;
+		}
+	}
+	//student single page
+	.student-single{
+		h2{
+			text-align: center;
+		}
+		.wp-block-button{
+			text-align: center;
+		}
+		@media(min-width:600px){
+			h2{
+				text-align: left;
+			}
+			img{
+				display: inline;
+				float: left;
+				margin-right: 1.5rem;
+			}
+			.wp-block-button{
+				margin-top: 2rem;
+				text-align: initial;
+			}
+		}
+	}
+	.student-profile{
+		min-height: 75vh;
+		margin: 0 auto;
+		@media(min-width: 40.625rem){
+			img{
+				float: right;
+			}
+		}
+		.taxonomy-list{
+			margin-top: 4rem;
+		}
+	}
+}
+
+//home blog section
+.home-blog{
+	text-align: center;
+
+	@media(min-width: 40.625rem){
+		display: flex;
+		flex-wrap: wrap;
+
+		h2{
+			width: 100%;
+		}
+	}
+
+	article{
+		text-align: center;
+
+		@media(min-width:40.625rem){
+			margin: 0 auto;
+			max-width: 33.33%;
+		}
+		a{
+			float: none;
+		}
+	}
+}
+//footer
+.site-footer{
+	color: #fff;
+	text-align: center;
+	margin-top: 2rem;
+    background-color: #424242;
+    height: 90px;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+	display: flex;
+	flex-direction: column;
+
+	@media(min-width:37.5rem){
+		height: 65px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+	}
+	p{
+		margin: 0;
+		color: #fff;
+	}
+}
+//sidebar
+#secondary{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@media(min-width:48rem){
+		flex-direction: row;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		align-items: baseline;
+	}
+	section{
+		@media(min-width:48rem){
+			width: 15%;
+		}
+		input{
+			@media(min-width:48rem){
+				width: 20%;
+			}
+		}
+	}
+}
